@@ -62,6 +62,7 @@ async function main (streamName) {
 
     if ( listStreams.length === 0 || !listStreams.find(stream => stream === streamName)) {
         await createStream(streamName)
+        stopProccess();
     }
     
     while (true) {
